@@ -29,7 +29,7 @@ const ImageCard = props => {
   };
 
   return (
-    <div className="card pr-3 pl-3 pt-3 bg-light" key={props.image.thumbnail}>
+    <div className="card p-3 mb-4 bg-light" key={props.image.thumbnail}>
       <a href={props.image.link} target="_blank" rel="noopener noreferrer">
         <img
           className="card-img-bottom"
