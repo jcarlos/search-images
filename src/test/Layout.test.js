@@ -15,7 +15,7 @@ describe("Layout", () => {
       "https://live.staticflickr.com/65535/48029106921_525b33889b_m.jpg"
   }]
   it("renders a <Container>", () => {
-    const wrapper = shallow(<Layout content={images} />);
+    const wrapper = shallow(<Layout images={images} />);
     expect(wrapper.type()).toBe("div");
   });
 });

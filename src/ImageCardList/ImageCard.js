@@ -12,10 +12,10 @@ const ImageCard = props => {
    tags could become it is own component as well
   */
   const shortTag = (tag) => {
-    if(tag.length < 20){
+    if(tag.length < 8){
       return tag
     }
-    return `${tag.substring(0, 17)}...`;
+    return `${tag.substring(0, 8)}...`;
   }
 
   const tags = imageTags => {

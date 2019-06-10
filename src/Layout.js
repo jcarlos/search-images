@@ -1,6 +1,6 @@
 import React from "react";
 import FilterImageList from "./FilterImageList"
-import ImageCard from "./ImageCard"
+import ImageCardList from "./ImageCardList/ImageCardList"
 
 class Layout extends React.Component {
   constructor(props) {
@@ -9,9 +9,7 @@ class Layout extends React.Component {
   }
 
   render() {
-    const images = FilterImageList(this.props.content, this.state.searchTerm).map(image => {
-      return <ImageCard image={image} key={image.thumbnail} />
-    });
+    const imageList = FilterImageList(this.props.images, this.state.searchTerm)
 
     const onSearch = e => {
       this.setState({ searchTerm: e.target.value.toLowerCase() });
@@ -31,12 +29,7 @@ class Layout extends React.Component {
             />
           </form>
         </nav>
-        <div
-          className="card-columns p-4 mx-auto"
-          style={{ maxWidth: "1080px" }}
-        >
-          {images}
-        </div>
+        <ImageCardList imageList={imageList} />
       </div>
     );
 

@@ -1,8 +1,16 @@
+/* 
+parseTags is tested as part of imagesFromFlicker test
+should be good enough for exercise purposes
+*/
 const parseTags = (tags) => {
      if(tags === "") return []
      return tags.split(" ");
 }
 
+/* 
+parseTags is tested as part of imagesFromFlicker test
+should be good enough for exercise purposes
+*/
 const parseAuthor = (author) => {
      // remove 'nobody@flickr.com ("' from beginning
      // and also ") from end"
