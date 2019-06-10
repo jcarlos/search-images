@@ -57,9 +57,9 @@ describe("Images.parseFlickerItem", () => {
 
   const imageItem = {
     thumbnail: "https://live.staticflickr.com/65535/48029106921_525b33889b_m.jpg",
-    author: 'nobody@flickr.com ("NgocTu123")',
+    author: 'NgocTu123',
     date_taken: "2019-06-06T21:59:54-08:00",
-    tags: "t\u00fa anniversary",
+    tags: ["t\u00fa", "anniversary"],
     link: "https://www.flickr.com/photos/146532146@N04/48029106921/",
   };
 
@@ -71,18 +71,18 @@ describe("Images.parseFlickerItem", () => {
 describe("Images.fromFlicker", () => {
   const imagesData = [
     {
-      author: 'nobody@flickr.com ("Antik - Bremen")',
+      author: 'Antik - Bremen',
       date_taken: "2019-06-08T17:26:11-08:00",
       link: "https://www.flickr.com/photos/antik_walle/48029105786/",
-      tags: "",
+      tags: [],
       thumbnail:
         "https://live.staticflickr.com/65535/48029105786_7e4d01a9d9_m.jpg"
     },
     {
-      author: 'nobody@flickr.com ("NgocTu123")',
+      author: 'NgocTu123',
       date_taken: "2019-06-06T21:59:54-08:00",
       link: "https://www.flickr.com/photos/146532146@N04/48029106921/",
-      tags: "tú anniversary",
+      tags: ["tú", "anniversary"],
       thumbnail:
         "https://live.staticflickr.com/65535/48029106921_525b33889b_m.jpg"
     }

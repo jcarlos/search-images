@@ -1,5 +1,6 @@
 import React from "react";
 import FilterImageList from "./FilterImageList"
+import ImageCard from "./ImageCard"
 
 class Layout extends React.Component {
   constructor(props) {
@@ -9,27 +10,7 @@ class Layout extends React.Component {
 
   render() {
     const images = FilterImageList(this.props.content, this.state.searchTerm).map(image => {
-      const card = (
-        <div className="card p-3 bg-light" key={image.thumbnail}>
-          <a href={image.link} target="_blank" rel="noopener noreferrer">
-            <img
-              className="card-img-bottom"
-              src={image.thumbnail}
-              alt={image.tags}
-            />
-          </a>
-          <div className="card-body">
-            <h5 className="card-title">Image by {image.author}</h5>
-            <p className="card-text">{image.date_taken}</p>
-            <p className="card-text">
-              <small className="text-small">
-                {image.tags.substring(0, 50)}
-              </small>
-            </p>
-          </div>
-        </div>
-      );
-      return card;
+      return <ImageCard image={image} key={image.thumbnail} />
     });
 
     const onSearch = e => {
@@ -38,7 +19,7 @@ class Layout extends React.Component {
 
     const layout = (
       <div>
-        <nav className="navbar sticky-top navbar-light bg-light border-bottom border-success">
+        <nav className="navbar sticky-top navbar-light bg-light border-bottom border-primary">
           <h2 className="navbar-brand">Search images</h2>
           <form className="form-inline">
             <input
