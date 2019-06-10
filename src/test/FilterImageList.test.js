@@ -5,19 +5,19 @@ describe("FilterImageList", () => {
     thumbnail: "https://live.staticflickr.com/65535/48029106921_525b33889b_m.jpg",
     author: 'nobody@flickr.com ("author1")',
     date_taken: "2019-06-06T21:59:54-08:00",
-    tags: "anniversary",
+    tags: ["anniversary"],
     link: "https://www.flickr.com/photos/146532146@N04/48029106921/",
   },{
     thumbnail: "https://live.staticflickr.com/65535/48029106921_525b33889b_m.jpg",
     author: 'nobody@flickr.com ("author12")',
     date_taken: "2019-06-06T21:59:54-08:00",
-    tags: "fa birthday",
+    tags: ["fa", "birthday"],
     link: "https://www.flickr.com/photos/146532146@N04/48029106921/",
   },{
     thumbnail: "https://live.staticflickr.com/65535/48029106921_525b33889b_m.jpg",
     author: 'nobody@flickr.com ("author3")',
     date_taken: "2019-06-04T21:59:54-08:00",
-    tags: "fa car",
+    tags: ["fa", "car"],
     link: "https://www.flickr.com/photos/146532146@N04/48029106921/",
   }]
 
