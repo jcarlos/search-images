@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "./Layout";
 import { imagesFromFlicker } from "./Images";
+import Loading from './Loading'
 
 class FlickerAPI extends React.Component {
   constructor(props) {
@@ -30,17 +31,7 @@ class FlickerAPI extends React.Component {
   render() {
     switch (this.state.loadStatus) {
       case "LOADING":
-        return (
-          <div className="text-center mt-5">
-            <div
-              className="spinner-grow text-primary mt-8"
-              style={{ width: "3rem", height: "3rem" }}
-              role="status"
-            >
-              <span class="sr-only">Loading...</span>
-            </div>
-            </div>
-        );
+        return <Loading />
       case "FAILED":
         return (
           <div>
