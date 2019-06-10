@@ -18,7 +18,6 @@ class FlickerAPI extends React.Component {
     fetch(url)
       .then(response => response.json())
       .then(data => {
-        console.log(data.items);
         const images = imagesFromFlicker(data);
         this.setState({ loadStatus: "LOADED", images: images });
       })
