@@ -8,6 +8,7 @@ const SearchBar = (props) => {
           <input
             className="form-control mr-sm-2"
             type="search"
+            onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}
             placeholder="Search images"
             aria-label="Search images"
             onChange={props.onSearch}
