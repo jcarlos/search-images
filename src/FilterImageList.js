@@ -3,10 +3,14 @@ const FilterImageList = (list, searchTerm) => {
     return list;
   }
   return list.filter(item => {
+    const tags = item.tags.map(tag => {
+      return tag.toLowerCase();
+    });
+
     return (
-      item.author.includes(searchTerm) ||
-      item.date_taken.includes(searchTerm) ||
-      item.tags.includes(searchTerm)
+      item.author.toLowerCase().includes(searchTerm) ||
+      item.date_taken.toLowerCase().includes(searchTerm) ||
+      tags.some(tag => tag.includes(searchTerm))
     );
   });
 };
