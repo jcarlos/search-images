@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Search Images",
+  "name": "Search Images on Flicker and possibly other services",
   "icons": [
     {
       "src": "favicon.ico",
