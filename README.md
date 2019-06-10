@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Purpose
+
+Project to get familiar with React which calls the public Flickr API and let you search the results
+
 ## Available Scripts
 
 In the project directory, you can run:
