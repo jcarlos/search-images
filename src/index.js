@@ -3,12 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.css';
-import Layout from './Layout';
-import flickerApi from './flickerApi';
-import { imagesFromFlicker } from './Images';
+import FlickerApi from './FlickerApi';
 
 // ReactDOM.render(<App />, document.getElementById('root'));
-ReactDOM.render(<Layout images={imagesFromFlicker(flickerApi)} />, document.getElementById('root'));
+ReactDOM.render(<FlickerApi />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
