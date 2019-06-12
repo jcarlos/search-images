@@ -1,7 +1,7 @@
 import React from "react";
-import { ImagesFromFlicker, parseFlickerItem } from "../Images";
+import { ImagesFromFlickr, parseFlickrItem } from "../Images";
 
-const flickerData = {
+const FlickrData = {
   title: "Uploads from everyone",
   link: "https://www.flickr.com/photos/",
   description: "",
@@ -39,8 +39,8 @@ const flickerData = {
   ]
 };
 
-describe("Images.parseFlickerItem", () => {
-  const flickerItem = {
+describe("Images.parseFlickrItem", () => {
+  const FlickrItem = {
     title: "#t\u00fa #anniversary",
     link: "https://www.flickr.com/photos/146532146@N04/48029106921/",
     media: {
@@ -63,12 +63,12 @@ describe("Images.parseFlickerItem", () => {
     link: "https://www.flickr.com/photos/146532146@N04/48029106921/",
   };
 
-  it("generates image data from a flicker item", () => {
-    expect(parseFlickerItem(flickerItem)).toEqual(imageItem);
+  it("generates image data from a Flickr item", () => {
+    expect(parseFlickrItem(FlickrItem)).toEqual(imageItem);
   });
 });
 
-describe("Images.fromFlicker", () => {
+describe("Images.fromFlickr", () => {
   const imagesData = [
     {
       author: 'Antik - Bremen',
@@ -88,7 +88,7 @@ describe("Images.fromFlicker", () => {
     }
   ];
 
-  it("generate a colection of images from Flicker items", () => {
-    expect(ImagesFromFlicker(flickerData)).toEqual(imagesData);
+  it("generate a colection of images from Flickr items", () => {
+    expect(ImagesFromFlickr(FlickrData)).toEqual(imagesData);
   });
 });

@@ -1,5 +1,5 @@
 /* 
-parseTags is tested as part of imagesFromFlicker test
+parseTags is tested as part of imagesFromflickr test
 should be good enough for exercise purposes
 */
 const parseTags = (tags) => {
@@ -8,7 +8,7 @@ const parseTags = (tags) => {
 }
 
 /* 
-parseTags is tested as part of imagesFromFlicker test
+parseTags is tested as part of imagesFromflickr test
 should be good enough for exercise purposes
 */
 const parseAuthor = (author) => {
@@ -17,22 +17,22 @@ const parseAuthor = (author) => {
      return author.replace('nobody@flickr.com ("', '').slice(0, -2);
 }
 
-const parseFlickerItem = (flickerItem) => {
+const parseFlickrItem = (flickrItem) => {
      return { 
-          thumbnail: flickerItem.media.m,
-          author: parseAuthor(flickerItem.author),
-          date_taken: flickerItem.date_taken,
-          tags: parseTags(flickerItem.tags),
-          link: flickerItem.link
+          thumbnail: flickrItem.media.m,
+          author: parseAuthor(flickrItem.author),
+          date_taken: flickrItem.date_taken,
+          tags: parseTags(flickrItem.tags),
+          link: flickrItem.link
       }
 };
 
-const ImagesFromFlicker = (flickerData) => {
-     if(!Array.isArray(flickerData.items)) {
-          const invalidFlickerData = 'Invalid Flicker data';
-          throw invalidFlickerData;
+const ImagesFromFlickr = (flickrData) => {
+     if(!Array.isArray(flickrData.items)) {
+          const invalidflickrData = 'Invalid flickr data';
+          throw invalidflickrData;
      }
-     return flickerData.items.map(parseFlickerItem);
+     return flickrData.items.map(parseFlickrItem);
 };
 
-export { parseFlickerItem, ImagesFromFlicker };
+export { parseFlickrItem, ImagesFromFlickr };

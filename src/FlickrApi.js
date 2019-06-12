@@ -6,9 +6,9 @@ const tagsUrl = (searchTerm) => {
 
 const apiUrl = (searchTerm) => {
   const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
-  const flickerEndpint = "https://www.flickr.com/services/feeds/photos_public.gne?format=json&nojsoncallback=1"
+  const flickrEndpint = "https://www.flickr.com/services/feeds/photos_public.gne?format=json&nojsoncallback=1"
   const tags = tagsUrl(searchTerm);
-  const url = CORS_PROXY + flickerEndpint + tags
+  const url = CORS_PROXY + flickrEndpint + tags
   return url;
 }
 

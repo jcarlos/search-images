@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "./Layout";
-import { ImagesFromFlicker } from "./Images";
+import { ImagesFromFlickr } from "./Images";
 import { FlickrApi } from "./FlickrApi"
 import LoadStatus from './LoadStatus'
 
@@ -15,7 +15,7 @@ class HandleLayout extends React.Component {
     try {
     this.setState({ loadStatus: LoadStatus.LOADING })
       const images = await FlickrApi(searchTerm)
-      this.setState({ loadStatus: LoadStatus.LOADED, images: ImagesFromFlicker(images) });
+      this.setState({ loadStatus: LoadStatus.LOADED, images: ImagesFromFlickr(images) });
     }catch(err){
       this.setState({ loadStatus: LoadStatus.FAILED, failure: err });
     }
