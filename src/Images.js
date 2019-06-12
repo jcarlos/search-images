@@ -27,7 +27,7 @@ const parseFlickerItem = (flickerItem) => {
       }
 };
 
-const imagesFromFlicker = (flickerData) => {
+const ImagesFromFlicker = (flickerData) => {
      if(!Array.isArray(flickerData.items)) {
           const invalidFlickerData = 'Invalid Flicker data';
           throw invalidFlickerData;
@@ -35,4 +35,4 @@ const imagesFromFlicker = (flickerData) => {
      return flickerData.items.map(parseFlickerItem);
 };
 
-export { parseFlickerItem, imagesFromFlicker };
+export { parseFlickerItem, ImagesFromFlicker };

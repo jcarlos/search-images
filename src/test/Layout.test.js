@@ -16,6 +16,6 @@ describe("Layout", () => {
   }]
   it("renders a <Container>", () => {
     const wrapper = shallow(<Layout images={images} />);
-    expect(wrapper.type()).toBe("div");
+    expect(wrapper.type()).toBe(React.Fragment);
   });
 });

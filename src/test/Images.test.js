@@ -1,5 +1,5 @@
 import React from "react";
-import { imagesFromFlicker, parseFlickerItem } from "../Images";
+import { ImagesFromFlicker, parseFlickerItem } from "../Images";
 
 const flickerData = {
   title: "Uploads from everyone",
@@ -89,6 +89,6 @@ describe("Images.fromFlicker", () => {
   ];
 
   it("generate a colection of images from Flicker items", () => {
-    expect(imagesFromFlicker(flickerData)).toEqual(imagesData);
+    expect(ImagesFromFlicker(flickerData)).toEqual(imagesData);
   });
 });
