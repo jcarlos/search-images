@@ -7,13 +7,13 @@ import LoadStatus from './LoadStatus'
 class HandleLayout extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { loadStatus: "LOADING", images: [], failure: "" };
+    this.state = { loadStatus: LoadStatus.LOADING, images: [], failure: "" };
     this.timeout = null;
   }
 
   fetchImages = async (searchTerm) => {
     try {
-    this.setState({ loadStatus: LoadStatus.LOADING })
+      this.setState({ loadStatus: LoadStatus.LOADING })
       const images = await FlickrApi(searchTerm)
       this.setState({ loadStatus: LoadStatus.LOADED, images: ImagesFromFlickr(images) });
     }catch(err){
