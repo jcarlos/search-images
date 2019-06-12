@@ -8,7 +8,6 @@ class HandleLayout extends React.Component {
   constructor(props) {
     super(props);
     this.state = { loadStatus: LoadStatus.LOADING, images: [], failure: "" };
-    this.timeout = null;
   }
 
   fetchImages = async (searchTerm) => {
@@ -21,26 +20,12 @@ class HandleLayout extends React.Component {
     }
   };
 
-  // to not overload the API with requests
-  // it cancels any pending search if a new search
-  // comes before 1000 miliseconds
-  searchAfterOneSecond = (searchTerm) => {
-    if (this.timeout !== null) {
-      window.clearTimeout(this.timeout)
-      this.timeout = null;
-    }
-    this.timeout = window.setTimeout(() => {
-      this.fetchImages(searchTerm);
-    }, 1000);
-  };
-
   componentDidMount = () => {
     this.fetchImages();
   };
 
-  onSearch = e => {
-    const searchTerm = e.target.value.toLowerCase();
-    this.searchAfterOneSecond(searchTerm);
+  onSearch = searchTerm => {
+    this.fetchImages(searchTerm);
   };
 
   render() {
